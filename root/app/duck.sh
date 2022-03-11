@@ -3,7 +3,7 @@
 . /app/duck.conf
 
 
-if [ !"$UPDATE_IPV6" = "true" ];
+if [ !"$UPDATE_IPV6" = "true" ]; then 
     #Check for Ipv4 
     RESPONSE=`curl -s "https://www.duckdns.org/update?domains=$SUBDOMAINS&token=$TOKEN&ip="`
     if [ "$RESPONSE" = "OK" ]; then
